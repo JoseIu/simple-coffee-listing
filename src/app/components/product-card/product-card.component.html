@@ -10,15 +10,22 @@
       </h2>
 
       <div *ngIf="product.rating; else noRating" class="product__rating">
-        <img class="product__star" src="assets/images/Star_fill.svg" alt="" />
-        <span> {{ product.rating }} </span>
-        <span class="product__votes">({{ product.votes }} votes)</span>
+        <div class="product__info">
+          <img class="product__star" src="assets/images/Star_fill.svg" alt="" />
+          <span> {{ product.rating }} </span>
+          <span class="product__votes">({{ product.votes }} votes)</span>
+        </div>
+
+        <span class="product__sold" *ngIf="!product.available">Sold out</span>
       </div>
 
+      <!---NO RATING-->
       <ng-template #noRating>
         <div class="product__rating">
-          <img class="product__star" src="assets/images/Star.svg" alt="" />
-          <span> No rating</span>
+          <div class="product__info">
+            <img class="product__star" src="assets/images/Star.svg" alt="" />
+            <span> No rating</span>
+          </div>
         </div>
       </ng-template>
     </div>

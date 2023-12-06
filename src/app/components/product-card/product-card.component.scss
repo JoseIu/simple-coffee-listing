@@ -17,7 +17,9 @@
     left: 0.5em;
     width: auto;
     padding: 0.3em 0.5em;
-    border-radius: 0.3em;
+    border-radius: 1em;
+    font-size: 0.625rem;
+    font-weight: 600;
     text-align: center;
     background-color: var(--popular-bg-color);
     color: var(--color-text-black);
@@ -39,11 +41,16 @@
   &__price {
     padding: 0.4em 0.6em;
     border-radius: 0.4em;
+    font-size: 0.75rem;
     background-color: var(--price-bg-color);
     color: var(--color-text-black);
     font-weight: 600;
   }
   &__rating {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
     display: flex;
     align-items: center;
     column-gap: 0.6em;
@@ -52,6 +59,13 @@
     width: 1.5em;
   }
   &__votes {
+    font-size: 0.75rem;
+    font-weight: 600;
     color: var(--light-grey-color);
+  }
+  &__sold {
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: var(--sold-bg-color);
   }
 }
