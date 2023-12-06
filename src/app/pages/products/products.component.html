@@ -5,15 +5,17 @@
     different roast types and origins, expertly roasted in small batches and
     shipped fresh weekly.
   </p>
-  <nav class="products__nav">
-    <li class="products__nav-li">
-      <a class="products__nav-link" routerLink="all-products">All products</a>
-    </li>
-    <li class="products__nav-li">
-      <a class="products__nav-link" routerLink="available-products"
-        >Available Now</a
-      >
-    </li>
+  <nav>
+    <ul class="products__nav">
+      <li class="products__nav-li">
+        <a class="products__nav-link" routerLink="all-products">All products</a>
+      </li>
+      <li class="products__nav-li">
+        <a class="products__nav-link" routerLink="available-products"
+          >Available Now</a
+        >
+      </li>
+    </ul>
   </nav>
   <div class="products__products">
     <router-outlet></router-outlet>
