@@ -1,1 +1,5 @@
-<p>available-products works!</p>
+<app-loader *ngIf="isLoading; else notLoading"></app-loader>
+
+<ng-template #notLoading>
+  <product-card [allProducts]="productsAvailable"></product-card>
+</ng-template>

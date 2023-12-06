@@ -8,11 +8,15 @@ import { ProductsService } from 'src/app/services/products-service.service';
   styleUrls: ['./all-products.component.scss'],
 })
 export class AllProductsComponent implements OnInit {
+  public isLoading: Boolean = true;
   public allProducts: Product[] = [];
   constructor(private producService: ProductsService) {}
   ngOnInit(): void {
-    this.producService
-      .getProducts()
-      .subscribe((products) => (this.allProducts = products));
+    this.isLoading = true;
+
+    this.producService.getProducts().subscribe((products) => {
+      this.allProducts = products;
+      this.isLoading = false;
+    });
   }
 }

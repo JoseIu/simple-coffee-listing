@@ -1,1 +1,5 @@
-<product-card [allProducts]="allProducts"></product-card>
+<app-loader *ngIf="isLoading; else notLoading"></app-loader>
+
+<ng-template #notLoading>
+  <product-card [allProducts]="allProducts"></product-card>
+</ng-template>
