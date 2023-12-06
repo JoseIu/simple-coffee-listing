@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Product } from '../interfaces/procuts.inerface';
 
 @Injectable({
@@ -13,5 +13,14 @@ export class ProductsService {
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl);
+  }
+  getProductsAvailable(): Observable<Product[]> {
+    return this.http
+      .get<Product[]>(this.baseUrl)
+      .pipe(
+        map((products) =>
+          products.filter((product) => product.available === true)
+        )
+      );
   }
 }
