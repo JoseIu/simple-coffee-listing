@@ -1,0 +1,136 @@
+:root {
+  --color-text-white: #fef7ee;
+  --color-text-black: #111315;
+  --bd-bg-color: #111315;
+  --bg-color: #1b1d1f;
+
+  --light-grey-color: #6f757c;
+  --price-bg-color: #bee3cc;
+  --popular-bg-color: #f6c768;
+  --sold-bg-color: #ed735d;
+
+  --tipo-principal: "DM Sans", Arial, sans-serif;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../public/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf")
+    format("ttf");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../public/fonts/DMSans-VariableFont_opsz,wght.ttf") format("ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+*::before,
+*::after {
+  display: block;
+}
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* (Opcional) */
+  object-fit: cover;
+  /* (Opcional) */
+  object-position: center center;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+p a {
+  display: inline;
+}
+li {
+  list-style-type: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* (Opcional) */
+  appearance: none;
+}
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  background-color: var(--bd-bg-color);
+  font-family: var(--tipo-principal);
+  color: var(--color-text-white);
+  /* (Opcional) */
+  hyphens: auto;
+  /* (Opcional) */
+  font-smooth: always;
+  /* (Opcional) */
+  -webkit-font-smoothing: antialiased;
+  /* (Opcional) */
+  -moz-osx-font-smoothing: grayscale;
+}
