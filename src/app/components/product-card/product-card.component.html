@@ -1,0 +1,28 @@
+<div class="products">
+  <article class="product" *ngFor="let product of allProducts">
+    <span *ngIf="product.popular" class="product__popular">Popular</span>
+    <img class="product__img" [src]="product.image" alt="PRODUCTO" />
+    <div class="product__content">
+      <h2 class="product__title">
+        {{ product.name }}
+
+        <span class="product__price">{{ product.price }} </span>
+      </h2>
+
+      <div *ngIf="product.rating; else noRating" class="product__rating">
+        <img class="product__star" src="assets/images/Star_fill.svg" alt="" />
+        <span> {{ product.rating }} </span>
+        <span class="product__votes">({{ product.votes }} votes)</span>
+      </div>
+
+      <ng-template #noRating>
+        <div class="product__rating">
+          <img class="product__star" src="assets/images/Star.svg" alt="" />
+          <span> No rating</span>
+        </div>
+      </ng-template>
+    </div>
+  </article>
+</div>
+
+<!-- {{ allProducts | json }} -->
