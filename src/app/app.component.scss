@@ -1,9 +1,9 @@
 .main {
   width: 100%;
-
   padding: 6.25rem 0;
+  // background: linear-gradient(180deg, #20b2aa 20%, #000 20%);
   background-image: url("../assets/images/bg-cafee.jpg");
+
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
+  background-size: 100% auto;
 }
